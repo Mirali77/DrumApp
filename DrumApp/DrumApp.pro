@@ -16,10 +16,13 @@ CONFIG += sailfishapp
 
 SOURCES += src/DrumApp.cpp
 
+QT += multimedia
+
 DISTFILES += qml/DrumApp.qml \
     qml/cover/CoverPage.qml \
-    qml/pages/FirstPage.qml \
-    qml/pages/SecondPage.qml \
+    qml/pages/MenuPage.qml \
+    qml/pages/PlayPage.qml \
+    qml/pages/SettingsPage.qml \
     rpm/DrumApp.changes.in \
     rpm/DrumApp.changes.run.in \
     rpm/DrumApp.spec \
