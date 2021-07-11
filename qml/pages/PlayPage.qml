@@ -8,19 +8,13 @@ Page {
     Image {
         width: parent.width
         height: parent.height
-        source: StandardPaths.pictures + "/Fonts/main_font.jpg"
-
-        Text {
-            text: "Play page"
-            color: "white"
-            anchors {
-                horizontalCenter: parent.horizontalCenter
-                top: parent.top
-            }
-            font {
-                bold: true
-                pixelSize: 120
-            }
-        }
+        source: StandardPaths.pictures + "/Fonts/FloorFont.jpg"
     }
+
+    Image {
+        width: parent.width
+        height: parent.height
+        source: StandardPaths.pictures + "/Drums/Drums.png"
+    }
+
 }
