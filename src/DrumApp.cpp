@@ -3,18 +3,38 @@
 #endif
 
 #include <sailfishapp.h>
+#include <iostream>
+#include <string>
+using namespace std;
 
-int main(int argc, char *argv[])
-{
-    // SailfishApp::main() will display "qml/%ProjectName%.qml", if you need more
-    // control over initialization, you can use:
-    //
-    //   - SailfishApp::application(int, char *[]) to get the QGuiApplication *
-    //   - SailfishApp::createView() to get a new QQuickView * instance
-    //   - SailfishApp::pathTo(QString) to get a QUrl to a resource file
-    //   - SailfishApp::pathToMainQml() to get a QUrl to the main QML file
-    //
-    // To display the view, call "show()" (will show fullscreen on device).
+class Drums {
+private:
+    // 0 - kick
+    // 1 - snare
+    // 2 - tom
+    // 3 - openHH
+    // 4 - closeHH
+    // 5 - crash
+    int drum[6];
+public:
+    Drums() {
+        for (int i = 0; i < 6; i++)
+            drum[i] = 0;
+    }
+    Drums (const Drums &other) {
+        for (int i = 0; i < 6; i++)
+            drum[i] = other.drum[i];
+    }
+    ~Drums() {}
 
+    void changeSound(int d) { drum[d]++; drum[d] = drum[d] % 6; }
+    string sound(int s) {
+        string str = "type" + to_string(drum[s]) + ".wav";
+        return str;
+    }
+};
+
+int main(int argc, char *argv[]) {
+    qRegisterMetaType<Drums>();
     return SailfishApp::main(argc, argv);
 }

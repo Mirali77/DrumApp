@@ -19,6 +19,7 @@ Source100:  DrumApp.yaml
 Requires:   sailfishsilica-qt5 >= 0.10.9
 Requires:   qt5-multimedia
 Requires:   qt5-declarative-import-multimedia
+Requires:   qt5-qtmultimedia-plugin-mediaservice-gstmediaplayer
 BuildRequires:  pkgconfig(sailfishapp) >= 1.0.2
 BuildRequires:  pkgconfig(Qt5Core)
 BuildRequires:  pkgconfig(Qt5Qml)
