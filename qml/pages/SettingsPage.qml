@@ -11,115 +11,80 @@ Page {
         source: StandardPaths.pictures + "/Fonts/MenuFontBlur.jpg"
     }
 
+    Image {
+        anchors {
+            horizontalCenter: parent.horizontalCenter
+            top: parent.top
+        }
+        source: StandardPaths.pictures + "/Fonts/Settings.png"
+    }
+
     Row {
-        anchors.centerIn: parent
-        height: parent.height - 200
-        spacing: 25
-        Rectangle {
-            color: "#7FFFD4"
-            width: 150; height: parent.height
-            radius: 30
-            border { color: "white"; width: 5 }
-            Text {
-                anchors {
-                    horizontalCenter: parent.horizontalCenter
-                    top: parent.top
-                    topMargin: 100
-                }
-                color: "black"
-                text: "Kick"
-                font {
-                    pixelSize: 40
+        anchors {
+           horizontalCenter: parent.horizontalCenter
+           bottom: parent.bottom
+           bottomMargin: 50
+        }
+
+        spacing: 50
+
+        Image {
+            source: StandardPaths.pictures + "/Buttons/KickButton.png"
+            MouseArea {
+                anchors.fill: parent
+                onClicked: {
+                    changeProperty("kick");
+                    clickSoundKick.play();
                 }
             }
         }
-        Rectangle {
-            color: "#40E0D0"
-            width: 150; height: parent.height
-            radius: 30
-            border { color: "white"; width: 5 }
-            Text {
-                anchors {
-                    horizontalCenter: parent.horizontalCenter
-                    top: parent.top
-                    topMargin: 100
-                }
-                color: "black"
-                text: "Snare"
-                font {
-                    pixelSize: 40
+        Image {
+            source: StandardPaths.pictures + "/Buttons/SnareButton.png"
+            MouseArea {
+                anchors.fill: parent
+                onClicked: {
+                    changeProperty("snare");
+                    clickSoundSnare.play();
                 }
             }
         }
-        Rectangle {
-            color: "#48D1CC"
-            width: 150; height: parent.height
-            radius: 30
-            border { color: "white"; width: 5 }
-            Text {
-                anchors {
-                    horizontalCenter: parent.horizontalCenter
-                    top: parent.top
-                    topMargin: 100
-                }
-                color: "black"
-                text: "Tom"
-                font {
-                    pixelSize: 40
+        Image {
+            source: StandardPaths.pictures + "/Buttons/TomButton.png"
+            MouseArea {
+                anchors.fill: parent
+                onClicked: {
+                    changeProperty("tom");
+                    clickSoundTom.play();
                 }
             }
         }
-        Rectangle {
-            color: "#00CED1"
-            width: 150; height: parent.height
-            radius: 30
-            border { color: "white"; width: 5 }
-            Text {
-                anchors {
-                    horizontalCenter: parent.horizontalCenter
-                    top: parent.top
-                    topMargin: 100
-                }
-                color: "black"
-                text: "Open HH"
-                font {
-                    pixelSize: 40
+        Image {
+            source: StandardPaths.pictures + "/Buttons/OpenHHButton.png"
+            MouseArea {
+                anchors.fill: parent
+                onClicked: {
+                    changeProperty("openhh");
+                    clickSoundOpenHH.play();
                 }
             }
         }
-        Rectangle {
-            color: "#20B2AA"
-            width: 150; height: parent.height
-            radius: 30
-            border { color: "white"; width: 5 }
-            Text {
-                anchors {
-                    horizontalCenter: parent.horizontalCenter
-                    top: parent.top
-                    topMargin: 100
-                }
-                color: "black"
-                text: "Close HH"
-                font {
-                    pixelSize: 40
+        Image {
+            source: StandardPaths.pictures + "/Buttons/CloseHHButton.png"
+            MouseArea {
+                anchors.fill: parent
+                onClicked: {
+                    changeProperty("closehh");
+                    clickSoundCloseHH.play();
                 }
             }
         }
-        Rectangle {
-            color: "#008B8B"
-            width: 150; height: parent.height
-            radius: 30
-            border { color: "white"; width: 5 }
-            Text {
-                anchors {
-                    horizontalCenter: parent.horizontalCenter
-                    top: parent.top
-                    topMargin: 100
-                }
-                color: "black"
-                text: "Crash"
-                font {
-                    pixelSize: 40
+        Image {
+            source: StandardPaths.pictures + "/Buttons/CrashButton.png"
+            MouseArea {
+                anchors.fill: parent
+                onClicked: {
+                    changeProperty("crash");
+                    clickSoundCrash.play();
                 }
             }
         }

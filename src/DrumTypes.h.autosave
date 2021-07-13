@@ -1,0 +1,16 @@
+#ifndef DRUMTYPES_H
+#define DRUMTYPES_H
+#include <QAbstractListModel>
+
+class Drums : public QAbstractListModel {
+    Q_OBJECT
+public:
+    Drums() {
+        
+    }
+    
+private:
+    int drums[6];
+};
+
+#endif // DRUMTYPES_H

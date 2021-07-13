@@ -18,6 +18,28 @@ Page {
         source: StandardPaths.pictures + "/Drums/Drums.png"
     }
 
+
+    Row {
+        anchors {
+            horizontalCenter: parent.horizontalCenter
+            top: parent.top
+        }
+        spacing: 0
+        Rectangle {
+            id: recordingButton
+            color: "white"
+            radius: 100
+            height: 100
+            width: 100
+            MouseArea {
+                anchors.fill: parent
+                onClicked: {
+                    recording();
+                }
+            }
+        }
+    }
+
     MouseArea {
         id: kick
         anchors {

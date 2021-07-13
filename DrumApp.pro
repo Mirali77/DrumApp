@@ -14,7 +14,10 @@ TARGET = DrumApp
 
 CONFIG += sailfishapp
 
-SOURCES += src/DrumApp.cpp
+SOURCES += src/DrumApp.cpp \
+    src/Drum.cpp \
+    src/DrumList.cpp \
+    src/Time.cpp
 
 QT += multimedia
 
@@ -42,4 +45,7 @@ CONFIG += sailfishapp_i18n
 # modify the localized app name in the the .desktop file.
 TRANSLATIONS += translations/DrumApp-de.ts
 
-HEADERS +=
+HEADERS += \
+    src/Drum.h \
+    src/DrumList.h \
+    src/Time.h
