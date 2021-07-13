@@ -1,6 +1,6 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
-import "D:/Users/Denis/Documents/DrumApp/DrumApp/DrumApp/qml/DrumApp.qml"
+import "C:/Users/user/DrumApp/qml/DrumApp.qml"
 
 Page {
     id: settingsPage
@@ -25,8 +25,8 @@ Page {
             MouseArea {
                 anchors.fill: parent
                 onClicked: {
-                    drumPreset.changeSound(0);
-
+                    soundTypeKick = "type2"
+                    clickSoundKick.play()
                 }
             }
         }
