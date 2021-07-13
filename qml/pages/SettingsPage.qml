@@ -1,6 +1,5 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
-import "C:/Users/user/DrumApp/qml/DrumApp.qml"
 
 Page {
     id: settingsPage
@@ -21,12 +20,16 @@ Page {
             width: 150; height: parent.height
             radius: 30
             border { color: "white"; width: 5 }
-
-            MouseArea {
-                anchors.fill: parent
-                onClicked: {
-                    soundTypeKick = "type2"
-                    clickSoundKick.play()
+            Text {
+                anchors {
+                    horizontalCenter: parent.horizontalCenter
+                    top: parent.top
+                    topMargin: 100
+                }
+                color: "black"
+                text: "Kick"
+                font {
+                    pixelSize: 40
                 }
             }
         }
@@ -35,30 +38,90 @@ Page {
             width: 150; height: parent.height
             radius: 30
             border { color: "white"; width: 5 }
+            Text {
+                anchors {
+                    horizontalCenter: parent.horizontalCenter
+                    top: parent.top
+                    topMargin: 100
+                }
+                color: "black"
+                text: "Snare"
+                font {
+                    pixelSize: 40
+                }
+            }
         }
         Rectangle {
             color: "#48D1CC"
             width: 150; height: parent.height
             radius: 30
             border { color: "white"; width: 5 }
+            Text {
+                anchors {
+                    horizontalCenter: parent.horizontalCenter
+                    top: parent.top
+                    topMargin: 100
+                }
+                color: "black"
+                text: "Tom"
+                font {
+                    pixelSize: 40
+                }
+            }
         }
         Rectangle {
             color: "#00CED1"
             width: 150; height: parent.height
             radius: 30
             border { color: "white"; width: 5 }
+            Text {
+                anchors {
+                    horizontalCenter: parent.horizontalCenter
+                    top: parent.top
+                    topMargin: 100
+                }
+                color: "black"
+                text: "Open HH"
+                font {
+                    pixelSize: 40
+                }
+            }
         }
         Rectangle {
             color: "#20B2AA"
             width: 150; height: parent.height
             radius: 30
             border { color: "white"; width: 5 }
+            Text {
+                anchors {
+                    horizontalCenter: parent.horizontalCenter
+                    top: parent.top
+                    topMargin: 100
+                }
+                color: "black"
+                text: "Close HH"
+                font {
+                    pixelSize: 40
+                }
+            }
         }
         Rectangle {
             color: "#008B8B"
             width: 150; height: parent.height
             radius: 30
             border { color: "white"; width: 5 }
+            Text {
+                anchors {
+                    horizontalCenter: parent.horizontalCenter
+                    top: parent.top
+                    topMargin: 100
+                }
+                color: "black"
+                text: "Crash"
+                font {
+                    pixelSize: 40
+                }
+            }
         }
     }
 }
